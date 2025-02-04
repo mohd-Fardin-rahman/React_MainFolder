@@ -13,7 +13,7 @@ const NavigationBar = () => {
             <Nav.Link href="/products">Products</Nav.Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Cars">Cars</NavDropdown.Item>
-              <NavDropdown.Item href="/bikes">Bikes</NavDropdown.Item>
+              <NavDropdown.Item href="/Bikes">Bikes</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Cloths">Clothes</NavDropdown.Item>
               <NavDropdown.Item href="/shoes">Shoes</NavDropdown.Item>
