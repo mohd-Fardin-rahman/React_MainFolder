@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
+
 const NavigationBar = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
@@ -15,8 +16,8 @@ const NavigationBar = () => {
               <NavDropdown.Item href="/Cars">Cars</NavDropdown.Item>
               <NavDropdown.Item href="/bikes">Bikes</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Cloths">Clothes</NavDropdown.Item>
-              <NavDropdown.Item href="/shoes">Shoes</NavDropdown.Item>
+              <NavDropdown.Item href="/ ">Clothes</NavDropdown.Item>
+              <NavDropdown.Item href="/Shoes">Shoes</NavDropdown.Item>
               <NavDropdown.Item href="/watches">Watches</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/contact">Contact</Nav.Link>
