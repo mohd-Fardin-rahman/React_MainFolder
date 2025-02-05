@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
-
 import ProductCard from "../Component/ProductCard";
 import NavigationBar from "../Component/Navbar";
 import Cars from "../Component/Cars";
