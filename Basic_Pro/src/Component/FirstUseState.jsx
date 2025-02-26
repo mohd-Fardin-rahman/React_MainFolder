@@ -7,7 +7,7 @@ function Counter() {
     <div style={styles.container}>
       <h1 style={styles.title}>Tasbih: {count}</h1>
       <div style={styles.buttonGroup}>
-        <button style={styles.button} onClick={() => setCount(count + 1)}>Increment</button>
+        <button style={styles.button} onClick={() => setCount(count + 1)}>Inssscrement</button>
         <button style={styles.button} onClick={() => setCount(count - 1)}>Decrement</button>
         <button style={styles.resetButton} onClick={() => setCount(0)}>Reset</button>
       </div>
