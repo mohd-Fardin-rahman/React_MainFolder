@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Cloths = () => {
+const Bikes = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/cloths")
+        axios.get("http://localhost:5000/bikes")
             .then(response => {
                 setProducts(response.data);
             })
@@ -18,10 +18,10 @@ const Cloths = () => {
         <div style={styles.container}>
             {products.map(product => (
                 <div key={product.id} style={styles.card}>
-                    <img src={product.image} alt={product.title} style={styles.image} />
+                    <img src={product.image_url} alt={product.title} style={styles.image} />
                     <h3>{product.name}</h3>
                     <h3>{product.title}</h3>
-                    <p>{product.description.substring(0, 50)}...</p>
+                    {/* <p>{product.description.substring(0, 50)}...</p> */}
                     <p><strong>Price:</strong> ${product.price}</p>
                     <button style={styles.button}>Buy Now</button>
                 </div>
@@ -61,4 +61,4 @@ const styles = {
     }
 };
 
-export default Cloths;
+export default Bikes;

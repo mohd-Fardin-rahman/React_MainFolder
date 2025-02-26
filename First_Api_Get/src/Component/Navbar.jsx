@@ -1,30 +1,34 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="/">ShopZone</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/products">Products</Nav.Link>
-            <NavDropdown title="Categories" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/Cars">Cars</NavDropdown.Item>
-              <NavDropdown.Item href="/bikes">Bikes</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/ ">Clothes</NavDropdown.Item>
-              <NavDropdown.Item href="/Shoes">Shoes</NavDropdown.Item>
-              <NavDropdown.Item href="/watches">Watches</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="/contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="bg-gray-900 text-white">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="/" className="text-xl font-bold">ShopZone</a>
+        <button className="lg:hidden text-white focus:outline-none">
+          ☰
+        </button>
+        <div className="hidden lg:flex space-x-6">
+          <a href="/" className="hover:text-gray-300">Home</a>
+          <a href="/products" className="hover:text-gray-300">Products</a>
+
+          {/* Dropdown */}
+          <div className="relative group">
+            <button className="hover:text-gray-300">Categories ▼</button>
+            <div className="absolute hidden group-hover:block bg-gray-800 text-white rounded shadow-lg mt-2">
+              <a href="/Cars" className="block px-4 py-2 hover:bg-gray-700">Cars</a>
+              <a href="/Bikes" className="block px-4 py-2 hover:bg-gray-700">Bikes</a>
+              <hr className="border-gray-600" />
+              <a href="/" className="block px-4 py-2 hover:bg-gray-700">Clothes</a>
+              <a href="/Shoes" className="block px-4 py-2 hover:bg-gray-700">Shoes</a>
+              <a href="/watches" className="block px-4 py-2 hover:bg-gray-700">Watches</a>
+            </div>
+          </div>
+
+          <a href="/contact" className="hover:text-gray-300">Contact</a>
+        </div>
+      </div>
+    </nav>
   );
 };
 
